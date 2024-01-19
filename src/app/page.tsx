@@ -1,43 +1,60 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="h-screen flex justify-start items-start flex-col gap-4 p-4">
-      <h1 className="text-7xl font-bold border-b-8 border-gray-200 pb-4">
-        MINH LE
-      </h1>
+      <h1>MINH LE</h1>
+      <p className="subtitle">
+        A web developer, a life-long learner, a writer-to-be
+      </p>
+      <Link href="/blog">
+        <section className="border border-gray-400 p-4 rounded-lg shadow-md shadow-gray-400 hover:bg-gray-800">
+          <h2>ABOUT ME</h2>
+          <div className="text-content">
+            <p>
+              I'm Minh Le. First and foremost, I am a web developer. Even though
+              during my time in school, I primarily worked with C++ and Java for
+              most of my projects, my true passion has always been web
+              development. I hold a Bachelor of Science degree in Computer
+              Science from San Jose State University.I constantly building web
+              apps. I am proficient in JavaScript and understand TypeScript well
+              enough for daily use. I primarily use ReactJS and NextJS to build
+              applications. I just started using TailwindCSS recently but
+              already fall in love with it.
+            </p>
+            <p>
+              Recently, when I am working myself to build a portfolio to be
+              ready for applying for a job, I just got another hobby: learning.
+              Everyday, I need to learn something new or at least find something
+              to stimulate my brain. Otherwise, I will feel stagnant and being
+              wasted of my time. As a result, I just start my journey of
+              becomming a life-long learner. At this moment, I know that I
+              choose the right job. To be a developer means constantly learning
+              new things.
+            </p>
+            <p>
+              Another ambition of mine is to become a writer. I said it is an
+              ambition because English is not my mother toungue. I wrote a lot
+              in Vietnamese but only 2 years agon, writing in English is still a
+              challenge to me. I had always dreammed that one day I can write
+              blog posts in English. Fortunately, now I feel like I can almost
+              touch my dream. The only thing I need to do now is to keep writing
+              regularly.
+            </p>
+          </div>
+        </section>
+      </Link>
       <section>
-        <h2>ABOUT ME</h2>
-        <div className="flex flex-col gap-2">
-          <p>
-            I'm Minh Le, a web developer based in Greenville, South Carolina. I
-            hold a Bachelor of Science degree in Computer Science from San Jose
-            State University. During my time in school, I primarily worked with
-            C++ and Java for most of my projects, but my true passion has always
-            been web development. As a result, I've been consistently building
-            web apps since graduating.
-          </p>
-          <p>
-            Unfortunately, upon graduation, the COVID-19 pandemic struck, posing
-            challenges in my job search. Consequently, I opted to pursue day
-            trading from home, resulting in a three-year gap in my resume. While
-            day trading helped me maintain a stable living situation, it did
-            impact my English proficiency, particularly in speaking. Just a year
-            ago, I struggled to form coherent sentences in English. Recognizing
-            this, I dedicated myself to daily practice, involving self-talk,
-            pronunciation training, reading, and writing. Now, I can confidently
-            say that I speak English fluently and am ready to rejoin the
-            workforce.
-          </p>
-          <p>
-            I am proficient in JavaScript and understand TypeScript well enough
-            for daily use. I primarily use ReactJS and NextJS to build
-            applications. I just started using TailwindCSS recently but already
-            fall in love with it. My objective is to continue expanding my
-            knowledge in web development. Currently, I am enrolled in AWS
-            courses with the hope of one day becoming proficient in full-stack
-            development, such that I can build a whole web app without help from
-            other services.
-          </p>
-        </div>
+        <h2>SKILLS</h2>
+        <ul className="flex gap-4">
+          <li className="bg-blue-500 text-black p-2 font-semibold rounded-3xl">
+            JavaScript
+          </li>
+          <li>TypeScript</li>
+          <li>ReactJS</li>
+          <li>NextJS</li>
+          <li>TailwindCSS</li>
+        </ul>
       </section>
       <section>
         <h2>PROJECTS</h2>
