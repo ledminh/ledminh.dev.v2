@@ -10,6 +10,18 @@ h2 {
   @apply text-3xl font-bold mb-4;
 }
 
+h3 {
+  @apply text-2xl font-bold mb-2;
+}
+
+h4 {
+  @apply text-xl font-bold mb-2;
+}
+
+section.with-border {
+  @apply p-4 border-2 border-gray-400 rounded-md;
+}
+
 .subtitle {
   @apply text-xl italic bg-gray-400 px-4 text-black font-semibold;
 }
