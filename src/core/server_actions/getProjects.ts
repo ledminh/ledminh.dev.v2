@@ -3,6 +3,7 @@ export default function getProjects() {
     {
       id: "p-1",
       name: "Learning Journal",
+      slug: "learning-journal",
       description: "A website to keep track of my learning progress.",
       github: "https://www.github.com/ledminh/learning-journal",
       demo: "https://learning-journal-drab.vercel.app/",
@@ -11,6 +12,7 @@ export default function getProjects() {
     {
       id: "p-2",
       name: "Learning Journal",
+      slug: "learning-journal",
       description: "A website to keep track of my learning progress.",
       github: "https://www.github.com/ledminh/learning-journal",
       demo: "https://learning-journal-drab.vercel.app/",
@@ -19,6 +21,7 @@ export default function getProjects() {
     {
       id: "p-3",
       name: "Learning Journal",
+      slug: "learning-journal",
       description: "A website to keep track of my learning progress.",
       github: "https://www.github.com/ledminh/learning-journal",
       demo: "https://learning-journal-drab.vercel.app/",
@@ -27,6 +30,7 @@ export default function getProjects() {
     {
       id: "p-4",
       name: "Learning Journal",
+      slug: "learning-journal",
       description: "A website to keep track of my learning progress.",
       github: "https://www.github.com/ledminh/learning-journal",
       demo: "https://learning-journal-drab.vercel.app/",
@@ -35,6 +39,7 @@ export default function getProjects() {
     {
       id: "p-5",
       name: "Learning Journal",
+      slug: "learning-journal",
       description: "A website to keep track of my learning progress.",
       github: "https://www.github.com/ledminh/learning-journal",
       demo: "https://learning-journal-drab.vercel.app/",
@@ -43,6 +48,7 @@ export default function getProjects() {
     {
       id: "p-6",
       name: "Learning Journal",
+      slug: "learning-journal",
       description: "A website to keep track of my learning progress.",
       github: "https://www.github.com/ledminh/learning-journal",
       demo: "https://learning-journal-drab.vercel.app/",

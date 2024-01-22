@@ -7,7 +7,7 @@ const ProjectSection: React.FC = async () => {
   return (
     <section className="">
       <h2 className="border-b-2 pb-2">PROJECTS</h2>
-      <ul className="flex gap-2 flex-wrap justify-between">
+      <ul className="flex gap-4 flex-wrap justify-between">
         {projects.map((project) => (
           <li key={project.id} className="basis-full sm:basis-[48%]">
             <ProjectCard {...project} />
@@ -39,29 +39,16 @@ export default ProjectSection;
  */
 const ProjectCard: React.FC<{
   name: string;
+  slug: string;
   description: string;
-  github: string;
-  demo: string;
-  imgUrl: string;
-}> = ({ name, description, github, demo, imgUrl }) => {
+}> = ({ name, slug, description }) => {
   return (
-    <div className="border border-gray-400 p-4 rounded-lg">
-      <h4 className="text-yellow-700">{name}</h4>
-      <p className="mb-3">{description}</p>
-      <div className="flex justify-start gap-4">
-        <Link
-          href={github}
-          className="border-b-4 border-b-yellow-800 hover:border-b-yellow-500"
-        >
-          Github
-        </Link>
-        <Link
-          href={demo}
-          className="border-b-4 border-b-yellow-800 hover:border-b-yellow-500"
-        >
-          Demo
-        </Link>
-      </div>
-    </div>
+    <Link
+      className="block border border-gray-400 p-4 rounded-lg hover:border-yellow-800 hover:ring-2 hover:ring-yellow-800 hover:ring-opacity-50 hover:shadow-md hover:shadow-yellow-800 group"
+      href={`/projects/${slug}`}
+    >
+      <h4 className="group-hover:text-yellow-800">{name}</h4>
+      <p className="mb-3 group-hover:text-gray-200">{description}</p>
+    </Link>
   );
 };

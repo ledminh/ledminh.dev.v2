@@ -19,7 +19,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " bg-black text-gray-200 flex justify-start items-start flex-col p-4 "
+          " bg-black text-gray-400 flex justify-start items-start flex-col p-4 text-xl"
         }
       >
         <header className="flex flex-col gap-4 mb-12">
