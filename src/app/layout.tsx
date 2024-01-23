@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
+
+import ContactSection from "@/ui/home/ContactSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +26,13 @@ export default function RootLayout({
         }
       >
         <header className="flex flex-col gap-4 mb-12">
-          <h1>MINH LE</h1>
-          <p className="subtitle">
-            A web developer, a life-long learner, a writer-to-be
-          </p>
+          <ContactSection />
+          <div className="flex flex-col gap-4">
+            <h1>MINH LE</h1>
+            <p className="subtitle">
+              A web developer, a life-long learner, a writer-to-be
+            </p>
+          </div>
         </header>
         {children}
       </body>

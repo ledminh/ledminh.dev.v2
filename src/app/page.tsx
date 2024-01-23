@@ -8,10 +8,11 @@ import ProjectSection from "@/ui/home/ProjectSection";
 export default function Home() {
   return (
     <main className="grid gap-12">
-      <ContactSection />
-      <AboutSection />
       <SkillSection />
+      <AboutSection />
+
       <EducationSection />
+
       <LearningJournalSection />
       <ProjectSection />
     </main>

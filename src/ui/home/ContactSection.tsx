@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ContactSection = () => {
   return (
-    <ul className="flex gap-2">
+    <ul className="flex gap-2 flex-row">
       {contactInfo.map((contact) => (
         <li key={contact.id}>
           <Link
