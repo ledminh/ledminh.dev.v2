@@ -79,7 +79,7 @@ function randomRotate() {
 const SkillCard: React.FC<{ skill: string }> = ({ skill }) => {
   return (
     <li
-      className={`${randomRotate()} ${randomBgColor()} text-black p-2 font-semibold rounded-3xl`}
+      className={`${randomRotate()} ${randomBgColor()} text-black p-2 font-semibold rounded-3xl md:text-sm lg:text-lg`}
     >
       {skill}
     </li>

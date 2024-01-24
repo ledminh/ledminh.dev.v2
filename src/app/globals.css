@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-7xl font-bold;
+  @apply text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold;
 }
 
 h2 {
@@ -23,7 +23,7 @@ section.with-border {
 }
 
 .subtitle {
-  @apply text-xl bg-gray-400 px-4 text-black font-semibold;
+  @apply text-lg sm:text-xl bg-gray-400 px-4 text-black font-semibold;
 }
 
 .text-content {

@@ -26,7 +26,7 @@ const EducationCard: React.FC<{
   duration: string;
 }> = ({ school, degree, duration }) => {
   return (
-    <div className="border-2 border-dashed border-gray-400 p-4">
+    <div className="border-2 border-dashed border-gray-400 p-4 md:text-base lg:text-lg">
       <h3 className="text-xl font-semibold">{school}</h3>
       <p>{degree}</p>
       <p>{duration}</p>
