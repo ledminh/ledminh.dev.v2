@@ -46,5 +46,6 @@ export default function getProjects() {
       imgUrl: "https://picsum.photos/300/300",
     },
   ];
-  return projects;
+
+  return Promise.resolve(projects);
 }

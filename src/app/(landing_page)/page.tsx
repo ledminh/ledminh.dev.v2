@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProjectCard from "@/ui/home/ProjectCard";
+import ProjectCard from "@/ui/landing_page/ProjectCard";
 import getProjects from "@/core/server/functions/getProjects";
 
 export default async function Home() {
