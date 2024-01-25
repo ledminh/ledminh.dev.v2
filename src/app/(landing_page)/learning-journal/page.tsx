@@ -2,13 +2,24 @@ import LearningJournalCard from "@/ui/landing_page/LearningJournalCard";
 import getLearningJournal from "@/core/server/functions/getLearningJournals";
 import { LEARNING_JOURNAL_WEBSITE } from "@/core/data/learning_journal";
 import Link from "next/link";
+import Menu from "@/ui/landing_page/Menu";
 
 export default async function LearningJounralPage() {
   const learningJournals = await getLearningJournal();
 
   return (
-    <section className="with-border">
-      <ul className="grid gap-2 mb-4">
+    <section>
+      <Menu currentPage="LEARNING JOURNAL" />
+      <p>
+        I built this journal to help with my study.{" "}
+        <Link
+          href={"https://www.github.com/ledminh/learning-journal"}
+          className="underline bold text-yellow-700 hover:text-yellow-500"
+        >
+          More info here
+        </Link>
+      </p>
+      <ul className="grid gap-2 mb-6">
         {learningJournals.map((learningJournal) => (
           <li
             key={learningJournal.id}

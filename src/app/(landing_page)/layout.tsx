@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 import ContactSection from "@/ui/landing_page/ContactSection";
-import Header from "@/ui/Header";
+import Header from "@/ui/landing_page/Header";
 import SkillSection from "@/ui/landing_page/SkillSection";
 import EducationSection from "@/ui/landing_page/EducationSection";
 import HOME_MENU from "@/core/data/home_menu";
+import Menu from "@/ui/landing_page/Menu";
 
 export default function LandingPageLayout({
   children,
@@ -18,18 +19,8 @@ export default function LandingPageLayout({
           <ContactSection />
           <Header />
         </div>
-        <section>
-          <ul className="flex gap-4 justify-start border-b-2 mb-8">
-            {HOME_MENU.map((item) => (
-              <li key={item.id}>
-                <Link href={item.link}>
-                  <h3>{item.title}</h3>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          {children}
-        </section>
+
+        {children}
       </div>
       <div className="flex flex-col gap-8 col-span-3 md:col-span-1">
         <EducationSection />

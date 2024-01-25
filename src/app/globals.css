@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-  @apply text-gray-300 text-2xl font-bold mb-2;
+  @apply text-gray-300 sm:text-2xl md:text-xl lg:text-2xl font-bold mb-2;
 }
 
 h4 {
@@ -31,5 +31,5 @@ section.with-border {
 }
 
 .text-content {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col gap-4 text-justify leading-relaxed text-lg font-medium;
 }
