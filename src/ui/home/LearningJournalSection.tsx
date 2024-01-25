@@ -1,5 +1,5 @@
 import Link from "next/link";
-import getLearningJournal from "@/core/server_actions/getLearningJournals";
+import getLearningJournal from "@/core/server/functions/getLearningJournals";
 import { LEARNING_JOURNAL_WEBSITE } from "@/core/data/learning_journal";
 
 const LearningJournalSection: React.FC = async () => {

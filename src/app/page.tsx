@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ProjectCard from "@/ui/home/ProjectCard";
-import getProjects from "@/core/server_actions/getProjects";
+import getProjects from "@/core/server/functions/getProjects";
 
 export default async function Home() {
   const projects = await getProjects();
