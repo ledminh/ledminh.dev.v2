@@ -14,13 +14,16 @@ export default function LandingPageLayout({
   return (
     <main className="grid grid-cols-3 gap-12 m-4 md:p-6 md:border md:border-gray-500 md:rounded-lg md:shadow-md md:shadow-gray-500 max-w-6xl">
       <div className="flex flex-col gap-12 col-span-3 md:col-span-2">
-        <Header />
+        <div className="flex flex-col gap-4">
+          <ContactSection />
+          <Header />
+        </div>
         <section>
           <ul className="flex gap-4 justify-start border-b-2 mb-8">
             {HOME_MENU.map((item) => (
               <li key={item.id}>
                 <Link href={item.link}>
-                  <h2>{item.title}</h2>
+                  <h3>{item.title}</h3>
                 </Link>
               </li>
             ))}
@@ -29,9 +32,13 @@ export default function LandingPageLayout({
         </section>
       </div>
       <div className="flex flex-col gap-8 col-span-3 md:col-span-1">
-        <SkillSection />
         <EducationSection />
-        <ContactSection />
+        <SkillSection />
+        <div className="basis-full flex justify-end items-end">
+          <span className="text-lg font-bold bg-gray-400 text-black px-4">
+            Minh Le © {new Date().getFullYear()}
+          </span>
+        </div>
       </div>
     </main>
   );

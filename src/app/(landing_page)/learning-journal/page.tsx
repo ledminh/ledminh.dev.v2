@@ -8,7 +8,6 @@ export default async function LearningJounralPage() {
 
   return (
     <section className="with-border">
-      <h2>LEARNING JOURNAL</h2>
       <ul className="grid gap-2 mb-4">
         {learningJournals.map((learningJournal) => (
           <li
