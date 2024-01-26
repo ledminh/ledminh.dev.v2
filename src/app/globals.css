@@ -32,4 +32,7 @@ section.with-border {
 
 .text-content {
   @apply flex flex-col gap-4 text-justify leading-relaxed text-lg font-medium;
+  p {
+    @apply indent-12;
+  }
 }
