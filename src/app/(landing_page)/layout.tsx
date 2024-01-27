@@ -11,7 +11,7 @@ export default function LandingPageLayout({
   modal: React.ReactNode;
 }) {
   return (
-    <main className="relative grid grid-cols-3 gap-12 m-4 md:p-6 md:border md:border-gray-500 md:rounded-lg md:shadow-md md:shadow-gray-500 max-w-6xl">
+    <main className="grid grid-cols-3 gap-12 m-4 md:p-6 md:border md:border-gray-500 md:rounded-lg md:shadow-md md:shadow-gray-500 max-w-6xl">
       {modal}
       <div className="flex flex-col gap-12 col-span-3 md:col-span-2">
         <div className="flex flex-col gap-4">

@@ -1,9 +1,4 @@
-import {
-  EmailIcon,
-  GithubIcon,
-  LinkedInIcon,
-  MessageIcon,
-} from "@/core/assets/icons";
+import { EmailIcon, GithubIcon, LinkedInIcon, MessageIcon } from "@/ui/icons";
 
 type ContactInfoItem = {
   id: string;
