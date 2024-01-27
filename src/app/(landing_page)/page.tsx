@@ -18,9 +18,11 @@ export default async function Home() {
         <li key="more" className="basis-full md:basis-[46%]">
           <Link
             href="/projects"
-            className="border border-gray-400 p-4 rounded-lg flex justify-center items-center h-full hover:border-yellow-800 hover:ring-2 hover:ring-yellow-800 hover:ring-opacity-50 hover:shadow-md hover:shadow-yellow-800"
+            className="border border-gray-400 p-4 rounded-lg flex justify-center items-center h-full hover:border-yellow-700 hover:ring-2 hover:ring-yellow-700 hover:ring-opacity-50 hover:shadow-md hover:shadow-yellow-700 group"
           >
-            <h4 className="text-yellow-700">More Projects</h4>
+            <h4 className="text-gray-400 group-hover:text-yellow-700">
+              More Projects
+            </h4>
           </Link>
         </li>
       </ul>
