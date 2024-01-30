@@ -19,7 +19,7 @@ export default function MessageMe() {
   if (submitState === "submitted")
     return (
       <div className="p-4 border-2 border-gray-400 rounded-lg w-2/3 max-w-[750px]">
-        <h2>MESSAGE ME</h2>
+        <h2 className="mb-4">MESSAGE ME</h2>
         <p className="text-lg font-semibold">
           Thank you, your message has been submitted.
         </p>
@@ -31,7 +31,7 @@ export default function MessageMe() {
 
   return (
     <div className="p-4 border-2 border-gray-400 rounded-lg w-2/3 max-w-[750px]">
-      <h2>MESSAGE ME</h2>
+      <h2 className="mb-4">MESSAGE ME</h2>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         <label className="flex flex-col gap-2 md:flex-row md:gap-6">
           <span className="text-lg font-semibold">NAME</span>

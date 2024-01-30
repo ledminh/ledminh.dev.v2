@@ -3,7 +3,7 @@ import EDUCATION from "@/core/data/education";
 const EducationSection: React.FC = () => {
   return (
     <section>
-      <h2 className="bg-gray-800 text-gray-100 px-4 py-2">EDUCATION</h2>
+      <h2 className="bg-gray-800 text-gray-100 px-4 py-2 mb-4">EDUCATION</h2>
       <ul className="grid gap-4">
         {EDUCATION.map((edu) => (
           <li key={edu.id}>
