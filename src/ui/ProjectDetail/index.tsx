@@ -1,10 +1,11 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { CloseIcon } from "@/ui/icons";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef, UIEventHandler } from "react";
+
+import TechStack from "./TechStack";
+import Links from "./Links";
+import ProjectHeader from "./ProjectHeader";
 
 export default function ProjectDetail() {
   const techStack = [
@@ -44,13 +45,13 @@ export default function ProjectDetail() {
           <ProjectHeader />
         </div>
         <div
-          className="bg-gray-600 w-full h-12 flex-row justify-between items-center pl-2 sticky opacity-0 hidden"
+          className="bg-gray-800 w-full h-12 flex-row justify-between items-center pl-2 sticky opacity-0 hidden"
           ref={linkDiv}
         >
           <Links />
         </div>
       </div>
-      <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-between">
+      <div className="flex flex-col gap-8 sm:gap-4 sm:flex-row sm:flex-wrap sm:justify-between">
         <Image
           src="https://picsum.photos/500/500"
           alt="Landing Page"
@@ -65,9 +66,8 @@ export default function ProjectDetail() {
           </div>
           <TechStack techStack={techStack} />
         </div>
-
-        <div className="text-lg flex flex-col gap-2">
-          <h3>DETAIL</h3>
+        <div className="text-lg flex flex-col gap-2 p-2">
+          <h3 className="border-b-2 border-gray-300">DETAIL</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
@@ -117,9 +117,9 @@ export default function ProjectDetail() {
             voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
           </p>
         </div>
-        <div>
-          <h3>SCREENSHOTS</h3>
-          <ul className="flex flex-wrap gap-2">
+        <div className="flex flex-col gap-2 p-2 basis-full">
+          <h3 className="border-b-2 border-gray-300">SCREENSHOTS</h3>
+          <ul className="flex flex-wrap gap-3">
             {Array.from({ length: 6 }).map((_, index) => {
               return (
                 <li key={index}>
@@ -139,71 +139,3 @@ export default function ProjectDetail() {
     </div>
   );
 }
-
-/**********************
- * Sub-components
- */
-const ProjectHeader = () => {
-  const router = useRouter();
-
-  return (
-    <div className="flex justify-between items-center border-b-4 border-b-gray-300 pb-3">
-      <h2>Project Name HERE</h2>
-      <button
-        className="text-white rounded-lg hover:text-yellow-500 active:text-yellow-700 md:hidden"
-        onClick={() => {
-          router.back();
-        }}
-      >
-        <CloseIcon />
-      </button>
-    </div>
-  );
-};
-
-const Links = () => {
-  return (
-    <ul className="flex gap-4">
-      <li>
-        <Link
-          className="text-white text-lg font-bold border-b-2 border-gray-200 hover:border-yellow-500 active:border-yellow-700 hover:text-yellow-500 active:text-yellow-700"
-          href="https://www.github.com/ledminh/learning-journal"
-        >
-          Github
-        </Link>
-      </li>
-      <li>
-        <Link
-          className="text-white text-lg font-bold border-b-2 border-gray-200 hover:border-yellow-500 active:border-yellow-700 hover:text-yellow-500 active:text-yellow-700"
-          href="https://www.github.com/ledminh/learning-journal"
-        >
-          Demo
-        </Link>
-      </li>
-    </ul>
-  );
-};
-
-const TechStack = ({ techStack }: { techStack: string[] }) => {
-  return (
-    <div className="flex flex-wrap gap-2">
-      <span className="text-white font-bold text-lg">Tech stack:</span>{" "}
-      <ul className="flex gap-2 flex-wrap">
-        {techStack.map((tech, index) => {
-          return (
-            <li key={index}>
-              <TechTab>{tech}</TechTab>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
-const TechTab = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <span className="bg-gray-600 rounded-md font-semibold px-2 py-1 text-sm">
-      {children}
-    </span>
-  );
-};
