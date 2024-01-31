@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Screenshot as ScreenshotType } from "@/core/types";
 
 type Props = {
-  screenshots: {
-    id: string;
-    src: string;
-    alt: string;
-  }[];
+  screenshots: ScreenshotType[];
 };
 
 export default function Screenshots({ screenshots }: Props) {

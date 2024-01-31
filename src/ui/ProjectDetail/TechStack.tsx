@@ -1,12 +1,18 @@
-const TechStack = ({ techStack }: { techStack: string[] }) => {
+import { Tech } from "@/core/types";
+
+type Props = {
+  techStack: Tech[];
+};
+
+const TechStack = ({ techStack }: Props) => {
   return (
     <div className="flex flex-wrap gap-2">
       <span className="text-white font-bold text-lg">Tech stack:</span>{" "}
       <ul className="flex gap-2 flex-wrap">
-        {techStack.map((tech, index) => {
+        {techStack.map((tech) => {
           return (
-            <li key={index}>
-              <TechTab>{tech}</TechTab>
+            <li key={tech.id}>
+              <TechTab>{tech.name}</TechTab>
             </li>
           );
         })}
