@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { CloseIcon } from "@/ui/icons";
+import { HomeIcon } from "@/ui/icons";
 import ProjectDetail from "@/ui/ProjectDetail";
 
 export default function ProjectPage() {
@@ -16,7 +16,7 @@ export default function ProjectPage() {
             router.back();
           }}
         >
-          <CloseIcon />
+          <HomeIcon />
         </button>
       </div>
       <ProjectDetail />
