@@ -6,6 +6,8 @@ import { useRef, UIEventHandler } from "react";
 import TechStack from "./TechStack";
 import Links from "./Links";
 import ProjectHeader from "./ProjectHeader";
+import Detail from "./Detail";
+import Screenshots from "./Screenshots";
 
 export default function ProjectDetail() {
   const techStack = [
@@ -66,75 +68,8 @@ export default function ProjectDetail() {
           </div>
           <TechStack techStack={techStack} />
         </div>
-        <div className="text-lg flex flex-col gap-2 p-2">
-          <h3 className="border-b-2 border-gray-300">DETAIL</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-            voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-          </p>
-        </div>
-        <div className="flex flex-col gap-2 p-2 basis-full">
-          <h3 className="border-b-2 border-gray-300">SCREENSHOTS</h3>
-          <ul className="flex flex-wrap gap-3">
-            {Array.from({ length: 6 }).map((_, index) => {
-              return (
-                <li key={index}>
-                  <Image
-                    src="https://picsum.photos/500/500"
-                    alt="Landing Page"
-                    width={500}
-                    height={500}
-                    className="rounded-lg w-20 h-20"
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <Detail />
+        <Screenshots />
       </div>
     </div>
   );
