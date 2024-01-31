@@ -15,14 +15,6 @@ type Props = {
 };
 
 export default function ProjectDetail({ BackIcon }: Props) {
-  const techStack = [
-    "Next.js",
-    "TailwindCSS",
-    "Prisma",
-    "Supabase",
-    "Postgresql",
-  ];
-
   const linkDiv = useRef<HTMLDivElement>(null);
   const infoDiv = useRef<HTMLDivElement>(null);
   const headerDiv = useRef<HTMLDivElement>(null);
@@ -42,6 +34,69 @@ export default function ProjectDetail({ BackIcon }: Props) {
     }
   };
 
+  const project = {
+    name: "Project Name",
+    github: "https://www.github.com/ledminh/learning-journal",
+    demo: "https://www.github.com/ledminh/learning-journal",
+    mainImageUrl: "https://picsum.photos/500/500",
+    techStack: ["Next.js", "TailwindCSS", "Prisma", "Supabase", "Postgresql"],
+    detailHTML: `
+    <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
+          voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
+        </p>
+    `,
+    screenshots: Array.from({ length: 6 }).map((_, index) => ({
+      id: "screen-" + index,
+      src: "https://picsum.photos/500/500",
+      alt: "Landing Page",
+    })),
+  };
+
   return (
     <Wrapper BackIcon={BackIcon}>
       <div
@@ -50,19 +105,19 @@ export default function ProjectDetail({ BackIcon }: Props) {
       >
         <div className="sticky top-0 w-full">
           <div className="bg-gray-700 pt-4" ref={headerDiv}>
-            <ProjectHeader />
+            <ProjectHeader name={project.name} />
           </div>
           <div
             className="bg-gray-800 w-full h-12 flex-row justify-between items-center pl-2 sticky opacity-0 hidden"
             ref={linkDiv}
           >
-            <Links />
+            <Links github={project.github} demo={project.demo} />
           </div>
         </div>
         <div className="flex flex-col gap-8 sm:gap-4 sm:flex-row sm:flex-wrap sm:justify-between">
           <Image
-            src="https://picsum.photos/500/500"
-            alt="Landing Page"
+            src={project.mainImageUrl}
+            alt={project.name}
             width={500}
             height={500}
             className="rounded-lg basis-full m-auto sm:basis-[48%]"
@@ -70,12 +125,12 @@ export default function ProjectDetail({ BackIcon }: Props) {
           <div className="p-2 border-4 border-gray-500 rounded-md flex flex-col gap-4 sm:basis-[48%] sm:border-transparent">
             <h3>INFO</h3>
             <div ref={infoDiv}>
-              <Links />
+              <Links github={project.github} demo={project.demo} />
             </div>
-            <TechStack techStack={techStack} />
+            <TechStack techStack={project.techStack} />
           </div>
-          <Detail />
-          <Screenshots />
+          <Detail detailHTML={project.detailHTML} />
+          <Screenshots screenshots={project.screenshots} />
         </div>
       </div>
     </Wrapper>

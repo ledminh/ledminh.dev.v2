@@ -36,3 +36,9 @@ section.with-border {
     @apply indent-12;
   }
 }
+
+.project-detail {
+  p {
+    @apply mb-2 indent-10 leading-relaxed;
+  }
+}

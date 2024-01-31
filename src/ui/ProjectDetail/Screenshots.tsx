@@ -1,21 +1,24 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function Screenshots() {
+type Props = {
+  screenshots: {
+    id: string;
+    src: string;
+    alt: string;
+  }[];
+};
+
+export default function Screenshots({ screenshots }: Props) {
   return (
     <div className="flex flex-col gap-2 p-2 basis-full">
       <h3 className="border-b-2 border-gray-300">SCREENSHOTS</h3>
       <ul className="flex flex-wrap gap-3">
-        {Array.from({ length: 6 }).map((_, index) => {
-          return (
-            <li key={index}>
-              <ScreenshotItem
-                src="https://picsum.photos/500/500"
-                alt="Landing Page"
-              />
-            </li>
-          );
-        })}
+        {screenshots.map((screenshot) => (
+          <li key={screenshot.id}>
+            <ScreenshotItem src={screenshot.src} alt={screenshot.alt} />
+          </li>
+        ))}
       </ul>
     </div>
   );
