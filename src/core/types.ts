@@ -11,12 +11,23 @@ export type Screenshot = {
 
 export type Project = {
   id: string;
+  featured: boolean;
   name: string;
   slug: string;
+  description: string;
   github: string;
   demo: string;
   mainImageUrl: string;
   techStack: Tech[];
   detailHTML: string;
   screenshots: Screenshot[];
+};
+
+export type ProjectSummary = {
+  id: string;
+  name: string;
+  slug: string;
+  featured: boolean;
+  description: string;
+  mainImageUrl: string;
 };

@@ -14,9 +14,10 @@ import { Project as ProjectType } from "@/core/types";
 
 type Props = {
   BackIcon: React.ReactNode;
+  project: ProjectType;
 };
 
-export default function ProjectDetail({ BackIcon }: Props) {
+export default function ProjectDetail({ BackIcon, project }: Props) {
   const linkDiv = useRef<HTMLDivElement>(null);
   const infoDiv = useRef<HTMLDivElement>(null);
   const headerDiv = useRef<HTMLDivElement>(null);
@@ -36,77 +37,6 @@ export default function ProjectDetail({ BackIcon }: Props) {
     }
   };
 
-  const project: ProjectType = {
-    id: "project-1",
-    name: "Project Name",
-    slug: "project-name",
-    github: "https://www.github.com/ledminh/learning-journal",
-    demo: "https://www.github.com/ledminh/learning-journal",
-    mainImageUrl: "https://picsum.photos/500/500",
-    techStack: [
-      { id: "tech-1", name: "React" },
-      { id: "tech-2", name: "Tailwind" },
-      { id: "tech-3", name: "TypeScript" },
-      { id: "tech-4", name: "Next.js" },
-      { id: "tech-5", name: "Vercel" },
-    ],
-    detailHTML: `
-  <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam,
-        voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam.
-      </p>
-  `,
-    screenshots: Array.from({ length: 6 }).map((_, index) => ({
-      id: "screen-" + index,
-      src: "https://picsum.photos/500/500",
-      alt: "Landing Page",
-    })),
-  };
-
   return (
     <Wrapper BackIcon={BackIcon}>
       <div
@@ -115,7 +45,7 @@ export default function ProjectDetail({ BackIcon }: Props) {
       >
         <div className="sticky top-0 w-full">
           <div className="bg-gray-700 pt-4" ref={headerDiv}>
-            <ProjectHeader name={project.name} />
+            <ProjectHeader name={project.name} BackIcon={BackIcon} />
           </div>
           <div
             className="bg-gray-800 w-full h-12 flex-row justify-between items-center pl-2 sticky opacity-0 hidden"

@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <section>
       <Menu currentPage="ABOUT" />
-      <div className="text-content px-2 md:max-h-[436px] md:overflow-y-scroll md:px-4">
+      <div className="text-content px-2 md:max-h-[496px] md:overflow-y-scroll md:px-4">
         <p>
           I'm Minh Le. First and foremost, I am a web developer. Even though
           during my time at school, I primarily worked with C++ and Java, my

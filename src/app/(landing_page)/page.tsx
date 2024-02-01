@@ -1,10 +1,10 @@
 import Link from "next/link";
 import ProjectCard from "@/ui/landing_page/ProjectCard";
-import getProjects from "@/core/server/functions/getProjects";
+import getFeaturedProjects from "@/core/server/projects/getFeaturedProjects";
 import Menu from "@/ui/landing_page/Menu";
 
 export default async function Home() {
-  const projects = await getProjects();
+  const projects = await getFeaturedProjects();
 
   return (
     <section>

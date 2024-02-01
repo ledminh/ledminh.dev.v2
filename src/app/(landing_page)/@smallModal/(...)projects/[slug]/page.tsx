@@ -2,9 +2,23 @@
 
 import ProjectDetail from "@/ui/ProjectDetail";
 import { CloseIcon } from "@/ui/icons";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function ProjectModalPage() {
+import { Project as ProjectType } from "@/core/types";
+
+import getProjectBySlugAction from "@/core/server/projects/getProjectBySlugAction";
+
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export default function ProjectModalPage({ params }: Props) {
+  const { slug } = params;
+
+  const [project, setProject] = useState<ProjectType | null>(null);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -12,5 +26,15 @@ export default function ProjectModalPage() {
     };
   }, []);
 
-  return <ProjectDetail BackIcon={<CloseIcon />} />;
+  useEffect(() => {
+    (async () => {
+      const project = await getProjectBySlugAction(slug);
+
+      setProject(project);
+    })();
+  }, [slug]);
+
+  return project ? (
+    <ProjectDetail BackIcon={<CloseIcon />} project={project} />
+  ) : null;
 }

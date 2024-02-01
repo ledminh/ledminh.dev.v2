@@ -7,7 +7,7 @@ const LearningJournalCard: React.FC<{
   description: string;
 }> = ({ title, link, date, description }) => {
   return (
-    <Link href={link} className="flex flex-col gap-2">
+    <Link href={link} className="flex flex-col gap-1">
       <div className="flex justify-between items-center">
         <h4 className="group-hover:text-yellow-700">{title}</h4>
         <span className="italic">{date}</span>

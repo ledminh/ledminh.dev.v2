@@ -10,7 +10,7 @@ export default async function LearningJounralPage() {
   return (
     <section>
       <Menu currentPage="LEARNING JOURNAL" />
-      <p>
+      <p className="mb-4">
         I built this journal to help with my study.{" "}
         <Link
           href={"https://www.github.com/ledminh/learning-journal"}
@@ -19,7 +19,7 @@ export default async function LearningJounralPage() {
           More info here
         </Link>
       </p>
-      <ul className="grid gap-2 mb-6">
+      <ul className="grid gap-2 mb-6 md:max-h-[390px] md:overflow-y-scroll p-2">
         {learningJournals.map((learningJournal) => (
           <li
             key={learningJournal.id}

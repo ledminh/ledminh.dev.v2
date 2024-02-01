@@ -1,10 +1,10 @@
 import { useRouter } from "next/navigation";
-import { CloseIcon } from "@/ui/icons";
 
 type Props = {
   name: string;
+  BackIcon: React.ReactNode;
 };
-const ProjectHeader = ({ name }: Props) => {
+const ProjectHeader = ({ name, BackIcon }: Props) => {
   const router = useRouter();
 
   return (
@@ -16,7 +16,7 @@ const ProjectHeader = ({ name }: Props) => {
           router.back();
         }}
       >
-        <CloseIcon />
+        {BackIcon}
       </button>
     </div>
   );

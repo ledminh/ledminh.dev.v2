@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-  @apply text-gray-300 text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold mb-2;
+  @apply text-gray-300 text-lg sm:text-2xl md:text-xl lg:text-2xl font-bold mb-2;
 }
 
 h4 {

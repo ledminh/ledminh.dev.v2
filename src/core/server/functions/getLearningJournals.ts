@@ -22,6 +22,27 @@ export default async function getLearningJournals() {
       link: "https://www.google.com",
       description: "This is a description of the learning journal.",
     },
+    {
+      id: "j-4",
+      title: "Learning Journal 3",
+      date: "2020-01-03",
+      link: "https://www.google.com",
+      description: "This is a description of the learning journal.",
+    },
+    {
+      id: "j-5",
+      title: "Learning Journal 3",
+      date: "2020-01-03",
+      link: "https://www.google.com",
+      description: "This is a description of the learning journal.",
+    },
+    {
+      id: "j-6",
+      title: "Learning Journal 3",
+      date: "2020-01-03",
+      link: "https://www.google.com",
+      description: "This is a description of the learning journal.",
+    },
   ];
 
   return learningJournals;
