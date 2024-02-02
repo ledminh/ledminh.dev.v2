@@ -5,7 +5,14 @@ export default function getAboutData(): Promise<AboutData> {
 }
 
 const about = {
-  short: `<p>Hello, I'm Minh Le. I'm a web developer. I know a little bit of everything, but I have been building web apps since I graduated from San Jose State University.</p>`,
+  short: `<p>
+  Hello, I'm Minh Le, a web developer from Greenville, SC. I have a B.S. degree in Computer Science, which means I've got a solid grasp of C++, Java, SQL, operating systems, algorithms, data structures, and the usual stuff they cover in a computer science program.
+
+  Web development is really what I love doing. I've been using HTML, CSS, and Javascript to build websites for about seven years. About two years ago, I started using TypeScript and now it's pretty much part of my everyday work. For most of my projects, I use ReactJS, NextJS, and TailwindCSS.
+  
+  Right now, I'm taking an algorithms course on Coursera to sharpen my coding skills and get ready for job interviews. I'm keeping track of what I learn in a journal, which you can check out on this website. I'm planning to take more courses soon, specifically in functional programming and cloud computing. At the same time, I'm working on my portfolio and creating new web apps, because building great websites is what I really enjoy. 
+    </p>
+    `,
   medium: `<p>
       I'm Minh Le. First and foremost, I am a web developer. Even though
       during my time at school, I primarily worked with C++ and Java, my
