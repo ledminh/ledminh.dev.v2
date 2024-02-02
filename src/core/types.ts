@@ -47,3 +47,9 @@ export type LearningJournal = {
   link: string;
   description: string;
 };
+
+/*****************************
+ * About Types
+ */
+
+export type AboutData = Record<"short" | "medium" | "long", string>;
