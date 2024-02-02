@@ -4,6 +4,23 @@ export default function AboutPage() {
   return (
     <section>
       <Menu currentPage="ABOUT" />
+      <ul className="flex gap-4 justify-center pb-4">
+        <li>
+          <div className="text-lg font-semibold text-yellow-600 border-b-2 border-b-yellow-600">
+            Short
+          </div>
+        </li>
+        <li>
+          <button className="text-lg font-semibold text-gray-400 hover:text-yellow-700 hover:border-b-2 hover:border-b-yellow-800">
+            Medium
+          </button>
+        </li>
+        <li>
+          <button className="text-lg font-semibold text-gray-400 hover:text-yellow-700 hover:border-b-2 hover:border-b-yellow-800">
+            Long
+          </button>
+        </li>
+      </ul>
       <div className="text-content px-2 md:max-h-[496px] md:overflow-y-scroll md:px-4">
         <p>
           I'm Minh Le. First and foremost, I am a web developer. Even though
