@@ -1,4 +1,8 @@
-export default async function getLearningJournals() {
+import type { LearningJournal } from "@/core/types";
+
+export default async function getLearningJournals(): Promise<
+  LearningJournal[]
+> {
   const learningJournals = [
     {
       id: "j-1",

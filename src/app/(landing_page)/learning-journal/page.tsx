@@ -1,5 +1,5 @@
 import LearningJournalCard from "@/ui/landing_page/LearningJournalCard";
-import getLearningJournal from "@/core/server/functions/getLearningJournals";
+import getLearningJournal from "@/core/server/learning_journal/getLearningJournals";
 import { LEARNING_JOURNAL_WEBSITE } from "@/core/data/learning_journal";
 import Link from "next/link";
 import Menu from "@/ui/landing_page/Menu";
