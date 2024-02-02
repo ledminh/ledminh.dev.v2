@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import sendMessageAction from "@/core/server/message/sendMessageAction";
 
 export default function MessageMe() {
   const [submitState, setSubmitState] = useState<
@@ -11,9 +12,11 @@ export default function MessageMe() {
     e.preventDefault();
     setSubmitState("submitting");
 
-    setTimeout(() => {
-      setSubmitState("submitted");
-    }, 1000);
+    sendMessageAction("This is a message").then(() => {
+      setTimeout(() => {
+        setSubmitState("submitted");
+      }, 1000);
+    });
   };
 
   if (submitState === "submitted")
