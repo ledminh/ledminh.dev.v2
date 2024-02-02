@@ -53,3 +53,12 @@ export type LearningJournal = {
  */
 
 export type AboutData = Record<"short" | "medium" | "long", string>;
+
+/********************************
+ * Message Type
+ */
+export type Message = {
+  name: string;
+  email: string;
+  message: string;
+};

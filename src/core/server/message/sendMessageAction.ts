@@ -1,7 +1,9 @@
 "use server";
 
-export default async function sendMessageAction(message: string) {
-  console.log("sendMessageAction", message);
+import { Message as MessageType } from "@/core/types";
+
+export default async function sendMessageAction(data: MessageType) {
+  console.log("sendMessageAction", data);
 
   return Promise.resolve();
 }
