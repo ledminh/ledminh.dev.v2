@@ -34,7 +34,7 @@ export default function AboutBlock({ about }: Props) {
         ))}
       </ul>
       <div
-        className="text-content px-2 md:h-[496px] md:overflow-y-scroll md:px-4"
+        className="text-content px-2 md:h-[28rem] md:overflow-y-scroll md:px-4"
         dangerouslySetInnerHTML={{ __html: about[activeTab] }}
       />
     </>
