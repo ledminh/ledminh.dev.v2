@@ -6,7 +6,9 @@ export default function getAboutData(): Promise<AboutData> {
 
 const about = {
   short: `
-  Hello
+  <p>Hello, I'm Minh Le, a web developer from Greenville, SC.</p> 
+  <p>I use React, NextJS, and TailwindCSS for most of my projects. Typescript is almost the only language that I am using every day, but I also know Java and C++ from my computer science degree.</p> 
+  <p>I'm currently taking an algorithms course on Coursera to sharpen my coding skills and get ready for job interviews. I build an app called Learning Journal to keep track of what I learn. I'm planning to take more courses soon, specifically in functional programming and cloud computing. At the same time, I'm working on my portfolio and creating new web apps, because building beafutiful websites is what I really enjoy.</p>
   `,
   medium: `<p>
     Hello, I'm Minh Le, a web developer from Greenville, SC. I have a B.S. 

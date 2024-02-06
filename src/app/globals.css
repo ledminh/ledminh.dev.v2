@@ -37,6 +37,10 @@ section.with-border {
   }
 }
 
+.about-short {
+  @apply text-lg sm:text-xl font-semibold flex flex-col justify-center items-start gap-4;
+}
+
 .project-detail {
   p {
     @apply mb-2 indent-10 leading-relaxed;
