@@ -1,10 +1,31 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import getProjects from "@/core/server/projects/getProjects";
+import getProjectsAction from "@/core/server/projects/getProjectsAction";
 
 import Image from "next/image";
+import { ProjectSummary } from "@/core/types";
 
-export default async function ProjectsPage() {
-  const projects = await getProjects();
+export default function ProjectsModalPage() {
+  const [projects, setProjects] = useState<ProjectSummary[]>([]);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      const projects = await getProjectsAction();
+
+      setProjects(projects);
+    })();
+  }, []);
+
+  if (!projects) return null;
 
   return (
     <section className="absolute top-0 left-0 w-full h-screen bg-black z-50 flex justify-center">
