@@ -5,6 +5,7 @@ export default async function getProjectBySlug(
 ): Promise<ProjectType> {
   const project: ProjectType = {
     id: "project-1",
+    priority: 1,
     name: "Project Name",
     slug: "project-name",
     featured: false,

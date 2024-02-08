@@ -15,6 +15,7 @@ export type Screenshot = {
 
 export type Project = {
   id: string;
+  priority: number;
   featured: boolean;
   name: string;
   slug: string;
