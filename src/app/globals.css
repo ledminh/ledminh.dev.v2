@@ -38,7 +38,7 @@ section.with-border {
 }
 
 .about-short {
-  @apply text-lg sm:text-xl font-semibold flex flex-col justify-center items-start gap-4;
+  @apply text-lg sm:text-xl font-semibold flex flex-col lg:justify-center items-start gap-4;
 }
 
 .project-detail {

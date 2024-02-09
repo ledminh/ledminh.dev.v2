@@ -11,7 +11,7 @@ const ProjectCard: React.FC<{
       href={`/projects/${slug}`}
     >
       <h4 className="group-hover:text-yellow-700 basis-full">{name}</h4>
-      <p className="basis-full mb-3 group-hover:text-gray-200 md:text-sm lg:text-base">
+      <p className="basis-full mb-3 group-hover:text-gray-200 md:text-sm">
         {description}
       </p>
     </Link>
