@@ -1,7 +1,19 @@
 import { createClient, SanityClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
+
 import SANITY_PROJECTS_ID from "../data/sanity";
-import { ProjectSummary } from "../types";
+import { Project, ProjectSummary } from "../types";
+
+const blocksToHtml = require("@sanity/block-content-to-html");
+
+const h = blocksToHtml.h;
+
+const serializers = {
+  types: {
+    code: (props: { node: { language: any; code: any } }) =>
+      h("pre", { className: props.node.language }, h("code", props.node.code)),
+  },
+};
 
 /********************
  * SANITY CLIENT
@@ -32,6 +44,34 @@ export function toProjectSummary(project: any): ProjectSummary {
     featured: project.featured,
     description: project.description,
     mainImageUrl: urlFor(project.mainImage).width(500).url(),
+  };
+}
+
+export function toProject(project: any): Project {
+  console.log("project: ", project);
+  return {
+    id: project._id,
+    priority: project.priority,
+    name: project.name,
+    slug: project.slug.current,
+    featured: project.featured,
+    description: project.description,
+    github: project.github,
+    demo: project.demo,
+    mainImageUrl: urlFor(project.mainImage).width(500).url(),
+    techStack: project.techStack.map((tech: any) => ({
+      id: tech._id,
+      name: tech.name,
+    })),
+    detailHTML: blocksToHtml({
+      blocks: project.detail,
+      serializers: serializers,
+    }),
+    screenshots: project.screenshots.map((screenshot: any) => ({
+      id: screenshot._id,
+      src: urlFor(screenshot).width(500).url(),
+      alt: "screenshot for " + project.name,
+    })),
   };
 }
 

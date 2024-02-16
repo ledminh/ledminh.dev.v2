@@ -8,5 +8,5 @@ export default async function getFeaturedProjects(): Promise<ProjectSummary[]> {
 
   const projects = projectsSanity.map(toProjectSummary);
 
-  return Promise.resolve(projects);
+  return projects;
 }

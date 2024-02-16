@@ -7,11 +7,13 @@ const ProjectCard: React.FC<{
 }> = ({ name, slug, description }) => {
   return (
     <Link
-      className="flex flex-wrap justify-start items-center border border-gray-400 p-4 rounded-lg hover:border-yellow-700 hover:ring-2 hover:ring-yellow-700 hover:ring-opacity-50 hover:shadow-md hover:shadow-yellow-700 group h-[9.36rem]"
+      className="grid grid-rows-6 border border-gray-400 p-4 rounded-lg hover:border-yellow-700 hover:ring-2 hover:ring-yellow-700 hover:ring-opacity-50 hover:shadow-md hover:shadow-yellow-700 group md:h-[9.36rem]"
       href={`/projects/${slug}`}
     >
-      <h4 className="group-hover:text-yellow-700 basis-full">{name}</h4>
-      <p className="basis-full mb-3 group-hover:text-gray-200 md:text-sm">
+      <h4 className="row-span-3 sm:row-span-2 group-hover:text-yellow-700 basis-full">
+        {name}
+      </h4>
+      <p className="row-span-3 sm:row-span-4 basis-full mb-3 group-hover:text-gray-200 md:text-sm">
         {description}
       </p>
     </Link>

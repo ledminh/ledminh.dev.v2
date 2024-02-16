@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <section>
       <Menu currentPage="PROJECTS" />
-      <ul className="grid gap-[1.45rem] md:grid-cols-2">
+      <ul className="grid gap-[1.45rem] sm:grid-cols-2">
         {projects.map((project) => (
           <li key={project.id}>
             <ProjectCard {...project} />
