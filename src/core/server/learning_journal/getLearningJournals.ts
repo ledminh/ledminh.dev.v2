@@ -17,7 +17,7 @@ export default async function getLearningJournals(): Promise<
     return {
       id: journalEntry.id,
       title: journalEntry.title,
-      date: journalEntry.createdAt.toISOString(),
+      date: journalEntry.createdAt.toLocaleDateString(),
       link: `https://learning-journal.ledminh.dev/entry/${journalEntry.slug}`,
       description: journalEntry.description,
     };
