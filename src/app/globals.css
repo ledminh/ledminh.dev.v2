@@ -45,4 +45,12 @@ section.with-border {
   p {
     @apply mb-2 indent-10 leading-relaxed;
   }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+
+  a {
+    @apply text-blue-400 hover:underline;
+  }
 }

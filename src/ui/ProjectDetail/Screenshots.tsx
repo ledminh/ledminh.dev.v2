@@ -12,7 +12,7 @@ export default function Screenshots({ screenshots }: Props) {
       <h3 className="border-b-2 border-gray-300">SCREENSHOTS</h3>
       <ul className="flex flex-wrap gap-3">
         {screenshots.map((screenshot) => (
-          <li key={screenshot.id}>
+          <li key={screenshot.src}>
             <ScreenshotItem src={screenshot.src} alt={screenshot.alt} />
           </li>
         ))}
@@ -56,18 +56,25 @@ const ScreenshotItem = (props: { src: string; alt: string }) => {
         />
       </button>
       {isOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex justify-center items-center"
+        <button
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex justify-center items-center overflow-y-scroll cursor-default"
           onClick={() => setIsOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              setIsOpen(false);
+            }
+          }}
+          tabIndex={0}
         >
           <Image
             src={props.src}
             alt={props.alt}
-            width={500}
-            height={500}
+            width={700}
+            height={700}
             className="rounded-lg"
+            onClick={(e) => e.stopPropagation()}
           />
-        </div>
+        </button>
       )}
     </>
   );

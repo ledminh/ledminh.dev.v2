@@ -48,7 +48,6 @@ export function toProjectSummary(project: any): ProjectSummary {
 }
 
 export function toProject(project: any): Project {
-  console.log("project: ", project);
   return {
     id: project._id,
     priority: project.priority,
@@ -58,7 +57,7 @@ export function toProject(project: any): Project {
     description: project.description,
     github: project.github,
     demo: project.demo,
-    mainImageUrl: urlFor(project.mainImage).width(500).url(),
+    mainImageUrl: urlFor(project.mainImage).width(1000).url(),
     techStack: project.techStack.map((tech: any) => ({
       id: tech._id,
       name: tech.name,
@@ -69,7 +68,7 @@ export function toProject(project: any): Project {
     }),
     screenshots: project.screenshots.map((screenshot: any) => ({
       id: screenshot._id,
-      src: urlFor(screenshot).width(500).url(),
+      src: urlFor(screenshot).width(1000).url(),
       alt: "screenshot for " + project.name,
     })),
   };
