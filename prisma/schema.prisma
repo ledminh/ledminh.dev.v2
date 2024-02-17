@@ -1,56 +1,11 @@
 generator client {
   provider = "prisma-client-js"
+  output  = "../src/core/data/prisma/ledminh-dev-client"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("LEDMINH_DEV_DATABASE_URL")
 }
 
-/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
-model DateEntry {
-  id           String         @id
-  date         DateTime       @unique @default(now())
-  JournalEntry JournalEntry[]
-}
 
-/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
-model JournalEntry {
-  id          String     @id
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime
-  title       String
-  slug        String     @unique
-  description String
-  materialId  String     @unique
-  content     String
-  dateEntryId String?
-  DateEntry   DateEntry? @relation(fields: [dateEntryId], references: [id])
-  Material    Material   @relation(fields: [materialId], references: [id])
-  Tag         Tag[]
-}
-
-/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
-model Material {
-  id           String        @id
-  createdAt    DateTime      @default(now())
-  type         MaterialType
-  content      String
-  JournalEntry JournalEntry?
-}
-
-/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
-model Tag {
-  name         String         @unique
-  createdAt    DateTime       @default(now())
-  slug         String         @unique
-  id           String         @id
-  JournalEntry JournalEntry[]
-}
-
-enum MaterialType {
-  LINK
-  QUOTE
-  CODE
-  IMAGE
-}

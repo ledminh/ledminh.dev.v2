@@ -1,13 +1,15 @@
 import type { LearningJournal } from "@/core/types";
 
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient as LearningJournalClient } from "@/core/data/prisma/learning-journal-client";
 
-const prisma = new PrismaClient();
+const learningJournalPrisma = new LearningJournalClient({
+  datasourceUrl: process.env.LEARNING_JOURNAL_DATABASE_URL,
+});
 
 export default async function getLearningJournals(): Promise<
   LearningJournal[]
 > {
-  const journalEntries = await prisma.journalEntry.findMany({
+  const journalEntries = await learningJournalPrisma.journalEntry.findMany({
     take: 6,
 
     orderBy: { createdAt: "desc" },
