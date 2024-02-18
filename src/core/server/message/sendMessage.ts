@@ -1,8 +1,8 @@
 import { Message as MessageType } from "@/core/types";
 
-import { PrismaClient as LedminhDevClient } from "@/core/data/prisma/ledminh-dev-client";
+import { PrismaClientLedminhDev } from "@prismany/client";
 
-const ledminhDevPrisma = new LedminhDevClient({
+const ledminhDevPrisma = new PrismaClientLedminhDev({
   datasourceUrl: process.env.LEDMINH_DEV_DATABASE_URL,
 });
 

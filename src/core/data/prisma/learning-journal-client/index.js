@@ -231,8 +231,8 @@ warnEnvConflicts({
     schemaEnvPath: config.relativeEnvPaths.schemaEnvPath && path.resolve(config.dirname, config.relativeEnvPaths.schemaEnvPath)
 })
 
-const PrismaClient = getPrismaClient(config)
-exports.PrismaClient = PrismaClient
+const PrismaClientLearning_journal_schema = getPrismaClient(config)
+exports.PrismaClientLearning_journal_schema = PrismaClientLearning_journal_schema
 Object.assign(exports, Prisma)
 
 // file annotations for bundling tools to include these files
