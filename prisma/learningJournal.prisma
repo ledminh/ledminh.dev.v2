@@ -1,7 +1,6 @@
 generator client {
   output = "../node_modules/@prisma/client/learningJournal"
   provider = "prisma-client-js"
-  binaryTargets = ["native", "rhel-openssl-1.0.x"]
 
 }
 
