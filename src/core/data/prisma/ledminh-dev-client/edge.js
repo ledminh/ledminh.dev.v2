@@ -131,6 +131,10 @@ const config = {
         "fromEnvVar": null,
         "value": "windows",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-1.0.x"
       }
     ],
     "previewFeatures": [],
@@ -156,8 +160,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "Z2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgID0gIi4uL3NyYy9jb3JlL2RhdGEvcHJpc21hL2xlZG1pbmgtZGV2LWNsaWVudCIKfQoKZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAicG9zdGdyZXNxbCIKICB1cmwgICAgICA9IGVudigiTEVETUlOSF9ERVZfREFUQUJBU0VfVVJMIikKfQoKCm1vZGVsIE1lc3NhZ2UgewogIGlkICAgICAgICBTdHJpbmcgICBAaWQgQGRlZmF1bHQodXVpZCgpKQogIGNyZWF0ZWRBdCBEYXRlVGltZSBAZGVmYXVsdChub3coKSkKICBuYW1lICAgICAgU3RyaW5nCiAgZW1haWwgICAgIFN0cmluZwogIG1lc3NhZ2UgICBTdHJpbmcKfQ==",
-  "inlineSchemaHash": "4492f8262aa97cbce8879a65a9af966325ce4da3fa2dfd088af62ca4fe69b5f5",
+  "inlineSchema": "Z2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgID0gIi4uL3NyYy9jb3JlL2RhdGEvcHJpc21hL2xlZG1pbmgtZGV2LWNsaWVudCIKICBiaW5hcnlUYXJnZXRzID0gWyJuYXRpdmUiLCAicmhlbC1vcGVuc3NsLTEuMC54Il0KfQoKZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAicG9zdGdyZXNxbCIKICB1cmwgICAgICA9IGVudigiTEVETUlOSF9ERVZfREFUQUJBU0VfVVJMIikKfQoKCm1vZGVsIE1lc3NhZ2UgewogIGlkICAgICAgICBTdHJpbmcgICBAaWQgQGRlZmF1bHQodXVpZCgpKQogIGNyZWF0ZWRBdCBEYXRlVGltZSBAZGVmYXVsdChub3coKSkKICBuYW1lICAgICAgU3RyaW5nCiAgZW1haWwgICAgIFN0cmluZwogIG1lc3NhZ2UgICBTdHJpbmcKfQ==",
+  "inlineSchemaHash": "6f3720726f4843eca501275e8a35a9e5e5e4a6a30bc99d945669eabcecc52337",
   "noEngine": false
 }
 config.dirname = '/'
