@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prismany generate"
+    "postinstall": "prisma generate --schema=./prisma/learningJournal.prisma && prisma generate --schema=./prisma/ledminhDev.prisma"
   },
   "dependencies": {
     "@prisma/client": "^5.9.1",

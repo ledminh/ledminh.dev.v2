@@ -1,6 +1,6 @@
 import type { LearningJournal } from "@/core/types";
 
-import { PrismaClientLearningJournal } from "@prismany/client";
+import { PrismaClient as PrismaClientLearningJournal } from "../../../../node_modules/@prisma/client/learningJournal";
 
 const learningJournalPrisma = new PrismaClientLearningJournal({
   datasourceUrl: process.env.LEARNING_JOURNAL_DATABASE_URL,
