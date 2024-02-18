@@ -17,6 +17,8 @@ export default function MessageMe() {
     "not-submit" | "submitting" | "submitted"
   >("not-submit");
 
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
   const onSubmit = (data: any) => {
     setSubmitState("submitting");
 
@@ -26,12 +28,27 @@ export default function MessageMe() {
       message: data.message as string,
     };
 
-    sendMessageAction(data).then(() => {
-      setTimeout(() => {
+    sendMessageAction(message)
+      .then(() => {
         setSubmitState("submitted");
-      }, 1000);
-    });
+      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+        setSubmitState("not-submit");
+      });
   };
+
+  if (errorMessage)
+    return (
+      <div className="p-4 border-2 border-gray-400 rounded-lg w-2/3 max-w-[750px]">
+        <h2 className="mb-4">MESSAGE ME</h2>
+        <p className="text-lg font-semibold text-red-600">{errorMessage}</p>
+        <p className="text-lg font-semibold">
+          Please try again or contact me through my email at{" "}
+          <span className="text-blue-500">minh.le@ledminh.dev</span>
+        </p>
+      </div>
+    );
 
   if (submitState === "submitted")
     return (

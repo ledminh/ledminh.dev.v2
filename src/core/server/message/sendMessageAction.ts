@@ -1,7 +1,8 @@
 "use server";
 
 import { Message as MessageType } from "@/core/types";
+import sendMessage from "./sendMessage";
 
-export default async function sendMessageAction(data: MessageType) {
-  return Promise.resolve();
+export default async function sendMessageAction(message: MessageType) {
+  return await sendMessage(message);
 }
