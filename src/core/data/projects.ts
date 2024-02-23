@@ -1,3 +1,3 @@
-const PROJECT_WEBSITE = "https://www.project.com";
+const PROJECT_WEBSITE = "https://projects.ledminh.dev";
 
 export default PROJECT_WEBSITE;
